@@ -1,9 +1,9 @@
-import tkinter as tk
+import tkinter as tk #importação do pacote Tkinter
 
 
 
 
-ipv4 = ['192.168.0.102', '192.168.0.103', '192.168.0.104', '192.168.0.105', 
+ipv4 = ['192.168.0.102', '192.168.0.103', '192.168.0.104', '192.168.0.105',  #Minha variavel com Ips estáticos
         '192.168.0.106', '192.168.0.107', '192.168.0.108', '192.168.0.109', 
         '192.168.0.110', '192.168.0.111', '192.168.0.112', '192.168.0.113', 
         '192.168.0.114', '192.168.0.115', '192.168.0.116', '192.168.0.117', '192.168.0.118', '192.168.0.119', 
@@ -23,17 +23,17 @@ ipv4 = ['192.168.0.102', '192.168.0.103', '192.168.0.104', '192.168.0.105',
         '192.168.0.36', '192.168.0.37', '192.168.0.38', '192.168.0.39', 
         '192.168.0.40', '192.168.0.41']
 
-dns = ["DNS Primário google: 8.8.8.8 DNS Secundário google: 8.8.4.4\nDNS Primário cloudflare:  1.1.1.1 DNS Secundário cloudflare: 1.0.0.1 gateway padrão: 192.168.0.1 Comaprimento do prefixo de rede: 24/"]
-def capturar_dados():
-    entrada = int(entry.get())
-    if entrada >= 0 and entrada <= 100:
+dns = ["DNS Primário google: 8.8.8.8 DNS Secundário google: 8.8.4.4\nDNS Primário cloudflare:  1.1.1.1 DNS Secundário cloudflare: 1.0.0.1 gateway padrão: 192.168.0.1 Comprimento do prefixo de rede: 24/"] #Minha variável de DNS
+def capturar_dados(): # Minha função que retorna um mensagem em caixa popup
+    entrada = int(entry.get())# Pega os dados de entrada
+    if entrada >= 0 and entrada <= 100: #verifica se existe o número total da lista(reatorna  uma mensagem)
         messagebox.showinfo("Dados Capturados", f"Seu novo Ip: {ipv4[entrada],[dns]}")
     else:
         messagebox.showwarning("Aviso", "Número inválido!")
 
 
-root = tk.Tk()
-root.geometry("300x250")
+root = tk.Tk() # ìnicio da interface gráfica
+root.geometry("300x150") # Tamanoa de Tela da interface(Ajustável)
 root.title("IpManual")
 
 label = tk.Label(root, text="Digite de 0 - 82:\n Veja qual Ip Deves usar!")
@@ -48,6 +48,7 @@ botao.pack(pady=10,)
 
 
 #mostrar = tk.Label(root, text= "@cirinotech")
+#50% IA 50% Humano
 #mostrar.pack(pady=10, padx=55)
 
 
